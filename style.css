@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+}
+
+select, button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+select {
+    background: #e8e8e8;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.generate-btn {
+    background: #007bff;
+    color: white;
+}
+
+.generate-btn:hover {
+    background: #0056b3;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #218838;
+}
+
+.excuse-box {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    min-height: 50px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+ 
