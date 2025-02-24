@@ -1,7 +1,7 @@
 let excuses = {};
 
 // טעינת התירוצים מהקובץ JSON
-fetch("funny_excuses.json")
+fetch('large_excuses.json')
     .then(response => response.json())
     .then(data => {
         excuses = data;
