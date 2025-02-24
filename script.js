@@ -1,7 +1,7 @@
 let excuses = {};
 
-// טעינת הנתונים מקובץ JSON
-fetch("large_excuses.json")
+// טעינת התירוצים מהקובץ JSON
+fetch("funny_excuses.json")
     .then(response => response.json())
     .then(data => {
         excuses = data;
@@ -11,7 +11,7 @@ fetch("large_excuses.json")
 function generateExcuse() {
     const category = document.getElementById("category").value;
     if (!excuses[category] || excuses[category].length === 0) {
-        document.getElementById("excuse").textContent = "אין תירוצים זמינים.";
+        document.getElementById("excuse").textContent = "אין תירוצים זמינים, המצא אחד בעצמך!";
         return;
     }
     const excuseList = excuses[category];
@@ -19,10 +19,10 @@ function generateExcuse() {
     document.getElementById("excuse").textContent = randomExcuse;
 }
 
-// פונקציה להעתקת התירוץ ללוח
+// העתקת תירוץ ללוח
 function copyExcuse() {
     const excuseText = document.getElementById("excuse").textContent;
     navigator.clipboard.writeText(excuseText).then(() => {
-        alert("התירוץ הועתק בהצלחה!");
+        alert("התירוץ הועתק בהצלחה! שתף אותו עם חברים! 😂");
     }).catch(err => console.error("שגיאה בהעתקה:", err));
 }
